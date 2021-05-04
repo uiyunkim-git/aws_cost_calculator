@@ -30,7 +30,7 @@ def API_GATEWAY_REST_REQUEST(requests,with_free_tier=True):
     cost,requests = cost_until((1.72/1000000),requests+1,requests)
     total_cost += cost
 
-    print(round(total_cost,2),"API_GATEWAY_REST_REQUEST")
+    print(total_cost,"API_GATEWAY_REST_REQUEST")
     return total_cost
 
 

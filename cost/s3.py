@@ -23,7 +23,7 @@ def S3_COST_STORED_AMOUNT(gigabyte_per_month,with_free_tier=True):
 
     cost,gigabyte_per_month = cost_until(0.023,gigabyte_per_month+1,gigabyte_per_month)
     total_cost += cost
-    print(round(total_cost, 2), "S3_COST_STORED_AMOUNT")
+    print(total_cost, "S3_COST_STORED_AMOUNT")
     return total_cost
 
 def S3_COST_OUTBOUND_TRAFFIC(gigabyte_per_month,with_free_tier=True):
@@ -56,7 +56,7 @@ def S3_COST_OUTBOUND_TRAFFIC(gigabyte_per_month,with_free_tier=True):
 
     cost,gigabyte_per_month = cost_until(0.108,gigabyte_per_month+1,gigabyte_per_month)
     total_cost += cost
-    print(round(total_cost, 2), "S3_COST_OUTBOUND_TRAFFIC")
+    print(total_cost, "S3_COST_OUTBOUND_TRAFFIC")
     return total_cost
 
 def S3_COST_PER_PUT_REQUEST(num_request,with_free_tier=True):
@@ -66,10 +66,10 @@ def S3_COST_PER_PUT_REQUEST(num_request,with_free_tier=True):
 
     if num_request >= 0:
         total_cost = (0.0045 / 1000) * num_request
-        print(round(total_cost, 2), "S3_COST_PER_PUT_REQUEST")
+        print(total_cost, "S3_COST_PER_PUT_REQUEST")
         return total_cost
     else:
-        print(round(0, 2), "S3_COST_PER_PUT_REQUEST")
+        print(0, "S3_COST_PER_PUT_REQUEST")
         return 0
 
 def S3_COST_PER_GET_REQUEST(num_request,with_free_tier=True):
@@ -79,10 +79,10 @@ def S3_COST_PER_GET_REQUEST(num_request,with_free_tier=True):
 
     if num_request >= 0:
         total_cost = (0.00035  / 1000) * num_request
-        print(round(total_cost, 2), "S3_COST_PER_GET_REQUEST")
+        print(total_cost, "S3_COST_PER_GET_REQUEST")
         return total_cost
     else:
-        print(round(0, 2), "S3_COST_PER_GET_REQUEST")
+        print(0, "S3_COST_PER_GET_REQUEST")
         return 0
 
 if __name__ == '__main__':

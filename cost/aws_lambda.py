@@ -15,9 +15,8 @@ def LAMBDA_COST(requests,ram_usage_in_megabyte,runtime_in_millisecond,with_free_
     total_cost = total_cost * 0.00001667
     total_cost += requests * (0.2 / 1000000)
 
-    print(round(total_cost,2),"LAMBDA_COST")
-    return round(total_cost,2)
-
+    print(total_cost,"LAMBDA_COST")
+    return total_cost
 
 
 if __name__ == '__main__':
